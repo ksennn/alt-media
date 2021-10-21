@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-	get 'welcome/index'
+  resources :posts do
+	resources :comments
+end
+  get 'posts/index'
 
-	root 'welcome#indx'
+root 'posts#index'
 end
