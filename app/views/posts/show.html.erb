@@ -1,26 +1,20 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
 
-<p>
-  <strong>Name:</strong>
+<%= image_tag(@post.image.url, class: 'show__img-post', alt: 'Image') if @post.image? %>
+
+<p class="show__name">
+  <strong class="show__name-post"></strong>
   <%= @post.name %>
 </p>
 
-<p>
-  <strong>Title:</strong>
+<p class="show__title">
+  <strong class="show__title-post"></strong>
   <%= @post.title %>
 </p>
 
-<p>
-  <strong>Content:</strong>
+<p class="show__content">
+  <strong class="show__content-post"></strong>
   <%= @post.content %>
 </p>
-
-<h2>Comments</h2>
-<%= render @post.comments %>
-
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>

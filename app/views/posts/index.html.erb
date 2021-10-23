@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+
+<h6 class="posts">Посты</h6>
+
+<%= link_to 'New Post', new_post_path, class: 'btn_new_post'%>
 
 <table>
   <thead>
@@ -18,6 +21,7 @@
         <td><%= post.name %></td>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
+        <td><%= image_tag(post.image.url, alt: 'Image')%></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,6 +30,15 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Post', new_post_path %>
+
+<div class="btn_">
+<%= link_to "ALT", promo_path %>
+</div>
+<div class="btn_">
+<%= link_to "О сервисе", about_path %>
+</div>
+
+
+
+<br>

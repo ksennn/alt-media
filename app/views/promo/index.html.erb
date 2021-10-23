@@ -1,0 +1,44 @@
+
+<div class="header">
+
+  <div class="btn_footer">
+      <h4 class="abt"><%= link_to "О проекте", about_path %></h4>
+      <h4 class="post"><%= link_to "Посты", posts_path %></h4>
+    </div>
+
+  <h8>ALT</h8>
+  <h2 class="one"> — ваш помощник </h2>
+  <h2 class="two"> в мире устойчивой моды </h2>
+  <%= image_tag 'ellipse', class: 'el'%>
+  <h3 class="three">*даже маленький шаг может стать частью больших изменений</h3>
+</div>
+
+<div class="main">
+  <p class="about">Медиа-сервис, который собирает всю <br>информацию про экологичное потребление <br>в моде, и дает возможность <br>осознанно совершать покупки. </p>
+  <%= image_tag 'mokup', class: 'mkup'%>
+  <%= image_tag 'back', class: 'bg'%>
+
+  <div class="shape s_1">
+     <h2 class="phras"> Как обновить старые вещи? </h2>
+  </div>
+
+  <div class="shape s_2">
+     <h2 class="phras"> Какие материалы выбрать? </h2>
+  </div>
+
+  <div class="shape s_3">
+     <h2 class="phras"> Экофрендли бренды? </h2>
+  </div>
+
+  <div class="shape s_4">
+     <h2 class="phras"> Как покупать осознанно? </h2>
+  </div>
+
+  <div class="shape s_5">
+     <h2 class="phras"> Куда сдать вещи на переработку? </h2>
+  </div>
+</div>
+
+<h3 class="descrp">Ответы на эти и другие вопросы <br>на нашем медиа-сервисе</h3>
+<h4 class="descrp_2">Подпишись на рассылку, чтобы ничего не пропустить</h4>
+<%= render "subscribers/form" %>
